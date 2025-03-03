@@ -1,0 +1,144 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --main-label-color: rgb(173,187,218);
+    --secondary-label-color: rgb(61,82,160);
+    --primary-label-color: rgb(134,151,196);
+    --plain-color: white;
+    --main-label-font: baskerville old face;
+    --main-font-size: 20px;
+    --small-size: 20px;
+
+}
+
+body {
+    background-color: var(--main-label-color);
+    font-family:var(--main-label-font);
+    font-size: var(--main-font-size);
+
+}
+
+
+.details-grid {
+
+    display: grid;
+    grid-template-columns:2fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "Navigation Navigation"
+    "Main-content image"
+    "about about "
+    "Footer Footer"
+    ;
+    
+}
+
+.Header{
+    grid-area: header;
+    background-color:var(--plain-color) ;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.Navigation-bar {
+    grid-area: Navigation;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-label-color);
+}
+
+
+
+.Body-intro {
+    grid-area: Main-content;
+    align-content: center;
+    margin-top: var(--small-size);
+    background-color: var(--main-label-color);
+}
+
+.Body-image {
+
+    grid-area: image;
+  
+}
+
+
+.Body-about {
+    grid-area: about;
+    padding: 20px;
+    background-color: var(--primary-label-color);
+    
+} 
+
+
+.Footer {
+    grid-area: Footer;
+    background-color: var(--plain-color);
+    padding: 10px;
+    text-align: center;
+}
+
+
+button {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: var(--secondary-label-color);
+    color: var(--plain-color);
+    
+}
+
+
+button:hover {
+
+    cursor: pointer;
+    background-color: var(--main-label-color);
+    color: var(--color-black) ;
+
+}
+
+
+img {
+    width: 700px;
+    height: 700px;
+    border-radius: 100px;
+
+} 
+
+p {
+    margin-top: 20px;
+
+}
+
+ol {
+    margin: 20px;
+}
+
+
+table {
+    width: 100; /* Full width */
+    border-collapse: collapse; /* Removes default spacing between cells */
+    border: 5px solid gray; /* Table border */
+}
+
+th, td {
+    border: 3px solid gray; /* Cell border */
+    padding: 10px; /* This replaces "cellpadding" */
+    text-align: left; /* Align text inside cells */
+}
+
+th {
+    background-color: var(--secondary-label-color); /* Light gray background for headers */
+}
+
+
+
