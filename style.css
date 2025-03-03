@@ -41,7 +41,7 @@ body {
     
 }
 
-.Header{
+.Header {
     grid-area: header;
     background-color:var(--plain-color) ;
     text-align: center;
@@ -125,20 +125,48 @@ ol {
 
 
 table {
-    width: 100; /* Full width */
-    border-collapse: collapse; /* Removes default spacing between cells */
-    border: 5px solid gray; /* Table border */
+    width: 100; 
+    border-collapse: collapse; 
+    border: 5px solid gray; 
 }
 
 th, td {
-    border: 3px solid gray; /* Cell border */
-    padding: 10px; /* This replaces "cellpadding" */
-    text-align: left; /* Align text inside cells */
+    border: 3px solid gray; 
+    padding: 10px; 
+    text-align: left; 
 }
 
 th {
-    background-color: var(--secondary-label-color); /* Light gray background for headers */
+    background-color: var(--secondary-label-color); 
 }
 
 
+@media screen and (max-width: 600px) { 
+    .details-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "Navigation"
+            "Main-content"
+            "image"
+            "about"
+            "Footer";
+    }
 
+    .Header {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .Navigation-bar {
+
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    img {
+        width: 100%; 
+        height: auto;
+      
+    } 
+}
